@@ -144,6 +144,7 @@ pushd kernel/
   repo_sync_until_success
 
   # fetch & apply ksu and \susfs patches
+  mkdir -p aosp/
   pushd aosp/
     # apply kernelsu
     curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
