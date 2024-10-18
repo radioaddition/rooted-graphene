@@ -46,7 +46,7 @@ function repo_sync_until_success() {
 
   # perform sync
   # (using -j4 makes the sync less likely to hit rate limiting)
-  until repo sync -c -j4 --fail-fast --no-clone-bundle --no-tags; do
+  until repo sync --verbose -c -j4 --fail-fast --no-clone-bundle --no-tags; do
     echo "repo sync failed, retrying in 1 minute..."
     sleep 60
   done
